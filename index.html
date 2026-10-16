@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Blade Studio · Слово за тобою</title>
+  <meta name="description" content="Ексклюзивне інтерв'ю «Слово за тобою» від Blade Studio.">
+  <meta name="theme-color" content="#08080b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- EDIT: вступ-капсула часу. Відео: media/video/capsule.mp4 -->
+  <div class="capsule" id="capsule">
+    <div class="capsule__grid" aria-hidden="true"></div>
+    <video id="capsuleVideo" src="media/video/capsule.mp4" playsinline preload="auto"></video>
+    <div class="capsule__content">
+      <p class="capsule__label">Часова капсула</p>
+      <p class="capsule__year" id="capsuleYear">2026</p>
+      <button class="btn btn--red" id="capsuleStart" type="button">Відкрити капсулу</button>
+      <p class="capsule__hint" id="capsuleHint">Натисніть, щоб увімкнути звук</p>
+    </div>
+    <button class="capsule__skip" id="capsuleSkip" type="button">Пропустити</button>
+  </div>
+
+  <header class="nav">
+    <a class="nav__brand" href="#top">BLADE STUDIO</a>
+    <nav class="nav__links" aria-label="Розділи сайту">
+      <a href="#video">Відео</a>
+      <a href="#project">Проєкт</a>
+      <a href="#locations">Локації</a>
+      <a href="#team">Команда</a>
+      <a href="#process">Як створено</a>
+      <a href="#thanks">Подяка</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO: ліворуч Вероніка, праворуч Артем. Фото з студії, кроп через CSS -->
+    <section class="hero" id="top">
+      <div class="hero__split" aria-hidden="true">
+        <div class="hero__side hero__side--left"><img src="media/photos/studio-hero.png" alt=""></div>
+        <div class="hero__side hero__side--right"><img src="media/photos/studio-hero.png" alt=""></div>
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+
+      <div class="hero__copy reveal">
+        <p class="kicker">Blade Studio представляє</p>
+        <h1>СЛОВО<br><span class="amber">ЗА ТОБОЮ</span></h1>
+        <p class="lead">Розмови, що мають значення.</p>
+        <div class="hero__cta">
+          <a class="btn btn--amber" href="#video">Дивитися 90 секунд</a>
+          <a class="btn btn--ghost" href="#project">Про проєкт</a>
+        </div>
+      </div>
+
+      <div class="hero__names">
+        <p class="name"><strong>Вероніка Даниленко</strong><span>Авторка каналу Блейд</span></p>
+        <p class="name name--right"><strong>Артем Качуровський</strong><span>Гість · 17 млн підписників</span></p>
+      </div>
+    </section>
+
+    <!-- ВІДЕО: сюди лягає media/video/main.mp4 -->
+    <section class="section" id="video">
+      <div class="section__head reveal">
+        <p class="kicker">Відео</p>
+        <h2>Ексклюзивне інтерв'ю</h2>
+        <p>Дев'яносто секунд про шлях, помилки і слова, які змінюють усе.</p>
+      </div>
+      <div class="player glass reveal">
+        <video id="mainVideo" controls playsinline preload="metadata" poster="media/photos/poster.png">
+          <source src="media/video/main.mp4" type="video/mp4">
+          Ваш браузер не відтворює відео.
+        </video>
+      </div>
+      <ul class="chips reveal">
+        <li>90 секунд</li>
+        <li>16:9</li>
+        <li>Українська мова</li>
+        <li>Створено з ШІ та вручну</li>
+      </ul>
+    </section>
+
+    <!-- ПРОЄКТ -->
+    <section class="section" id="project">
+      <div class="section__head reveal">
+        <p class="kicker">Проєкт</p>
+        <h2>Про проєкт</h2>
+        <p>Коротке інтерв'ю у форматі сучасного YouTube-шоу. Тут важлива кожна фраза і кожен кадр.</p>
+      </div>
+      <div class="grid">
+        <article class="card glass reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
+          </div>
+          <h3>Сценарій</h3>
+          <p>Питання короткі, відповіді живі. Речення складносурядні, але звучать як справжня розмова.</p>
+        </article>
+        <article class="card glass reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>
+          </div>
+          <h3>Локації</h3>
+          <p>Студія з бурштиновим світлом, вечірній Київ і місця, де починалася історія.</p>
+        </article>
+        <article class="card glass reveal">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg>
+          </div>
+          <h3>Створення</h3>
+          <p>Сценарій, образи, озвучка і монтаж зроблені вручну. Частину візуалу створено з допомогою штучного інтелекту.</p>
+        </article>
+      </div>
+
+      <div class="prose glass reveal">
+        <p>«Слово за тобою» — це дев'яносто секунд живої розмови. За такий короткий час ми хотіли встигнути головне: познайомити глядача з гостем, поставити питання, які змушують задуматися, і показати місця, де починалася історія.</p>
+        <p>Розмова ведеться українською. Кожне речення ми писали так, щоб його було приємно слухати. Складносурядні конструкції дають розмові ритм, а короткі питання тримають увагу. Ми не хотіли читати текст із аркуша, тому репліки звучать як розмова двох людей, які добре знають одна одну.</p>
+        <p>Сцени ми зняли і створили в кількох локаціях Києва: від темної студії з бурштиновим світлом до алей ВДНХ і кафе з видом на місто. Кожна локація має свій настрій, і разом вони складають історію від першого слова до останнього кадру.</p>
+      </div>
+    </section>
+
+    <!-- ЛОКАЦІЇ: фото в media/locations/, без файлу буде градієнт -->
+    <section class="section locations" id="locations">
+      <div class="section__head reveal">
+        <p class="kicker">Локації</p>
+        <h2>Де ми знімали</h2>
+        <p>Студія, вечірній Київ і місця, які стали частиною розмови.</p>
+      </div>
+      <div class="grid">
+        <article class="loc reveal" style="--c1:#2a1d12; --c2:#e8a54b55">
+          <img src="media/locations/studio.png" alt="Темна студія Blade Studio з двома шкіряними кріслами" style="object-position: 50% 50%" onerror="this.remove()">
+          <div class="loc__body"><h3>Студія</h3><p>Темна студія, шкіряні крісла, розмови без поспіху.</p></div>
+        </article>
+        <article class="loc reveal" style="--c1:#14202e; --c2:#3b6fb655">
+          <img src="media/locations/khreshchatyk.png" alt="Пара йде Хрещатиком" style="object-position: 0% 50%" onerror="this.remove()">
+          <div class="loc__body"><h3>Хрещатик</h3><p>Головна вулиця міста. Розмова на ходу, між осінніми деревами і старими фасадами.</p></div>
+        </article>
+        <article class="loc reveal" style="--c1:#2b2016; --c2:#c58a4a55">
+          <img src="media/locations/andriivskyi.png" alt="Пара йде Андріївським узвозом" style="object-position: 0% 50%" onerror="this.remove()">
+          <div class="loc__body"><h3>Андріївський узвіз</h3><p>Бруківка, старі фасади, історія Києва. Тут легко говорити про минуле.</p></div>
+        </article>
+        <article class="loc reveal" style="--c1:#1d2630; --c2:#c7d3dd44">
+          <img src="media/locations/vdnh.png" alt="Пара на ВДНХ перед головним павільйоном" style="object-position: 0% 50%" onerror="this.remove()">
+          <div class="loc__body"><h3>ВДНХ</h3><p>Широкі алеї і величні павільйони для розмов про великі речі.</p></div>
+        </article>
+        <article class="loc reveal" style="--c1:#0f2233; --c2:#2c63ff55">
+          <img src="media/locations/arka.jpg" alt="Кафе біля Арки Дружби народів" style="object-position: 0% 50%" onerror="this.remove()">
+          <div class="loc__body"><h3>Арка Дружби народів</h3><p>Кафе на пагорбі, де розмова повертає до сьогодення, а Київ лежить під ногами.</p></div>
+        </article>
+        <article class="loc reveal" style="--c1:#21160f; --c2:#f3c57c55">
+          <img src="media/locations/lavra.jpg" alt="Києво-Печерська лавра" onerror="this.remove()">
+          <div class="loc__body"><h3>Києво-Печерська лавра</h3><p>Золоті куполи над Дніпром. Місце, де тиша звучить голосніше за слова.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- КОМАНДА -->
+    <section class="section" id="team">
+      <div class="section__head reveal">
+        <p class="kicker">Команда</p>
+        <h2>Учасники</h2>
+        <p>Двоє людей, одна розмова.</p>
+      </div>
+      <div class="team">
+        <article class="person glass reveal">
+          <div class="person__photo" style="--pos: 8% 32%" role="img" aria-label="Вероніка Даниленко"></div>
+          <div class="person__body">
+            <h3>Вероніка Даниленко</h3>
+            <p class="role">Авторка каналу Блейд</p>
+            <p>Співавторка проєкту й учасниця інтерв'ю. Стежить за ритмом розмови, підбирає питання і відповідає за те, щоб кожна репліка звучала живо.</p>
+          </div>
+        </article>
+        <article class="person glass reveal">
+          <div class="person__photo" style="--pos: 92% 32%" role="img" aria-label="Артем Качуровський"></div>
+          <div class="person__body">
+            <h3>Артем Качуровський</h3>
+            <p class="role">Гість інтерв'ю</p>
+            <p>Понад 17 мільйонів підписників на YouTube. Говорить про шлях без глянцю і вміє розповісти історію так, щоб її хотілося дослухати.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ПРОЦЕС -->
+    <section class="section" id="process">
+      <div class="section__head reveal">
+        <p class="kicker">Процес</p>
+        <h2>Як це створено</h2>
+        <p>Від першої ідеї до готового сайту ми пройшли кілька етапів. Кожен із них вимагав уваги до деталей.</p>
+      </div>
+      <ol class="steps">
+        <li class="glass reveal"><h3>Ідея і сценарій</h3><p>Обговорили тему, написали питання і відповіді, перевірили таймінг, щоб усе вклалося в 90 секунд.</p></li>
+        <li class="glass reveal"><h3>Образи і референси</h3><p>Продумали одяг, зачіски і деталі, щоб персонажі виглядали однаково в кожному кадрі.</p></li>
+        <li class="glass reveal"><h3>Локації</h3><p>Підібрали студію, вулиці Києва і шкільну локацію так, щоб вони виглядали як одна історія.</p></li>
+        <li class="glass reveal"><h3>Голос і монтаж</h3><p>Озвучили репліки окремо, зібрали відео в CapCut, додали переходи, звук і субтитри.</p></li>
+        <li class="glass reveal"><h3>Сайт</h3><p>Написали сторінку на HTML, CSS і JavaScript, оформили її в кольорах студії і розмістили на GitHub і Netlify.</p></li>
+      </ol>
+    </section>
+
+    <!-- ПОДЯКА -->
+    <section class="section" id="thanks">
+      <div class="section__head reveal">
+        <p class="kicker">Подяка</p>
+        <h2>Дякуємо</h2>
+      </div>
+      <div class="prose glass reveal">
+        <p>Щиро дякуємо Наталії Іванівні за цікаве завдання. Саме воно підштовхнуло нас до ідеї зробити не реферат, а живу розмову, яку можна переглянути, послухати і відчути.</p>
+        <p>Ми підійшли до роботи дуже серйозно. Цілий день без перерви ми обговорювали тексти, записували репліки, шукали локації і складали з усього цього відео. Результат нам самим дуже сподобався, і ми пишаємося тим, що зробили.</p>
+        <p>Частину візуалу ми створювали за допомогою штучного інтелекту. Сценарій, тексти, вибір місць, озвучку і монтаж ми зробили самі, і готові розповісти про кожен крок.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Blade Studio · Проєкт «Слово за тобою»</p>
+    <!-- EDIT: посилання на канал -->
+    <p><a href="#" id="ytLink">Канал Blade Talks на YouTube</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
